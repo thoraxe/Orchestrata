@@ -1,0 +1,17 @@
+- title "Statistics"
+
+%table
+  %tr
+    %th Value
+    %th Application
+    %th Name
+  - for statistic in @statistics
+    %tr
+      %td= h statistic.value
+      %td= h statistic.application_id
+      %td= h statistic.name
+      %td= link_to 'Show', statistic
+      %td= link_to 'Edit', edit_statistic_path(statistic)
+      %td= link_to 'Destroy', statistic, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Statistic", new_statistic_path

@@ -1,0 +1,9 @@
+one:
+  value: 9.99
+  application_id: 1
+  name: MyString
+
+two:
+  value: 9.99
+  application_id: 1
+  name: MyString

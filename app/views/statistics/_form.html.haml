@@ -1,0 +1,16 @@
+- form_for @statistic do |f|
+  = f.error_messages
+  %p
+    = f.label :application_id
+    %br
+    = select('application', 'application_id', @applications.collect {|app| [ app.name, app.id ]} )
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :value
+    %br
+    = f.text_field :value
+  %p
+    = f.submit

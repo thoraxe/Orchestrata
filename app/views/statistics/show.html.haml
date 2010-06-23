@@ -1,0 +1,18 @@
+- title "Statistic"
+
+%p
+  %strong Value:
+  =h @statistic.value
+%p
+  %strong Application:
+  =h @statistic.application_id
+%p
+  %strong Name:
+  =h @statistic.name
+
+%p
+  = link_to "Edit", edit_statistic_path(@statistic)
+  |
+  = link_to "Destroy", @statistic, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", statistics_path
