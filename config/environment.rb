@@ -41,3 +41,7 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
+
+Workling::Remote.invoker = Workling::Remote::Invokers::EventmachineSubscriber
+Workling::Remote.dispatcher = Workling::Remote::Runners::ClientRunner.new
+Workling::Remote.dispatcher.client = Workling::Clients::AmqpClient.new
