@@ -3,3 +3,4 @@
 *.sqlite3
 workling_monitor.pid
 workling.output
+workling.pid
